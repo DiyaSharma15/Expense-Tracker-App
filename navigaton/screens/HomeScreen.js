@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Header from '../../components/header';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
     return (
-        <View style={styles.page}>
-            <Text
-                onPress={() => alert('This is the "Home" screen.')}
-                style={styles.text}>Home Screen</Text>
+        <View style={styles.container}>
+            <Header heading={'Expense Minder'}/>
         </View>
     );
 }

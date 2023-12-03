@@ -6,13 +6,13 @@ export default function ToDoForm({ addExpense }) {
     const [expenseText, setExpenseText] = React.useState('');
     return(
         <View style={styles.form}>
-        <TextInput
-            style={styles.input}
-            placeholder="Add as new task..."
-            onChangeText={(text) => setExpenseText(text)}
-            value={expenseText}
-        />
-        <Button title="Add" onPress={() => addExpense(expenseText)} />
+            <TextInput
+                style={styles.input}
+                placeholder="Add a new Expense..."
+                onChangeText={(text) => setExpenseText(text)}
+                value={expenseText}
+            />
+            <Button title="Add" onPress={() => addExpense(expenseText)} />
         </View>
     );
 }
@@ -33,4 +33,5 @@ const styles = StyleSheet.create({
         marginRight: 10,
         marginBottom: 20,
     },
+    
 })

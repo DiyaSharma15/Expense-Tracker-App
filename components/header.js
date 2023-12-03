@@ -13,17 +13,20 @@ export default function Header({ heading }){
 
 const styles = StyleSheet.create({
     header: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      marginTop: 30,
+        position: 'absolute',
+        width: 350,
+        height: 74,
+        left: 50,
+        top: 24,
+
+        backgroundColor: '#FFEACA',
+        borderRadius: 20,
     },
     headingText: {
         fontSize: 40,
-        backgroundColor: '#FFEACA',
-        borderRadius: 15,
         padding: 20,
         color: '#E27350',
+        textAlign: 'center',
+        fontWeight: '700',
     }
-  });
+});

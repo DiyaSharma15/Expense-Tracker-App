@@ -18,12 +18,11 @@ export default function Expenses({ expense }) {
 const styles = StyleSheet.create({
     expense: {
         flex: 1,
-        padding: 10,
+        padding: 100,
         borderBottomWidth: 1,
         borderColor: '#ccc',
     },
     expenseText: {
         fontSize: 30,
-        marginBottom: 5,
     },
 });

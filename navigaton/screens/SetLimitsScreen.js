@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Header from '../../components/header';
 
-export default function SetLimits({ navigation }) {
+export default function SetLimits() {
     return (
         <View style={styles.page}>
-            <Text style={styles.text}
-                onPress={() => navigation.navigate('Home')}> Set Limits Screen </Text>
+            <Header heading={'Set Limits'}/>
         </View>
     );
 }
