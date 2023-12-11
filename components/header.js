@@ -14,15 +14,16 @@ export default function Header({ heading }){
 const styles = StyleSheet.create({
     header: {
         position: 'absolute',
-        width: 350,
+        width: '100%', 
         height: 74,
-        left: 50,
         top: 24,
         backgroundColor: '#FFEACA',
         borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     headingText: {
-        fontSize: 40,
+        fontSize: 24,
         padding: 20,
         color: '#E27350',
         textAlign: 'center',

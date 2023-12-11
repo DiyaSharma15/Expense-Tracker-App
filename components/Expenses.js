@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from 'react-native';
 export default function Expenses({ expense }) {
     return (
         <View style={styles.expense}>
-          <Text style={styles.expenseHeading}>Expenses</Text>
+          <Text style={styles.expenseHeading}>Expenses:</Text>
           <View>
             {expense.map((expense, index) => (
               <Text style={styles.expenseText} key={index}>{expense}</Text>
@@ -26,11 +26,13 @@ const styles = StyleSheet.create({
   expenseHeading: {
     fontSize: 40,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 30,
     color: '#333',
   },
   expenseText: {
     fontSize: 30,
     color: '#666',
+    textAlign: 'center',
+    margin: 2,
   },
 });

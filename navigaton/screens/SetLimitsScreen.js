@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Keyboard } from 'react-native';
 import Header from '../../components/header';
 
 export default function SetLimitsScreen({ route }) {
@@ -11,22 +11,29 @@ export default function SetLimitsScreen({ route }) {
         setExpenseLimits({ ...expenseLimits, [expense]: limit });
     };
 
+    const saveLimit = () => {
+        console.log('Limit set');
+        Keyboard.dismiss();
+    };
+
     return (
         <View style={styles.container}>
             <Header heading={'Set Limits'}/>
             <Text style={styles.text}>Set Limits for Expenses:</Text>
             {expenses.map((expense, index) => (
                 <View key={index} style={styles.expenseRow}>
-                    <Text style={styles.expenseText}>{expense}</Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Set Limit"
-                        keyboardType="numeric"
-                        onChangeText={(text) => setLimit(expense, text)}
-                    />
-                </View>
+                <Text>{expense}</Text>
+                <TextInput style={styles.input}
+                    placeholder="Set Limit"
+                    keyboardType="numeric"
+                    onChangeText={(text) => setLimit(expense, text)}
+                />
+                <Button
+                    title="Save Limit"
+                    onPress={() => saveLimit(expense)}
+                />
+            </View>
             ))}
-            <Button title="Save Limits" onPress={() => console.log(expenseLimits)} />
         </View>
     );
 }
