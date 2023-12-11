@@ -24,17 +24,25 @@ export default function AddExpensesScreen({ navigation }) {
             <Header heading={'Add Expenses'}/>
             <Expenses expense={expenses} />
             <ToDoForm addExpense={addExpense} />
-            <Button title="View Expenses" onPress={goToHome} />
-            <Button title="Go to Set Limits" onPress={goToSetLimits} />
+            <View style={styles.buttonContainer}>
+                <Button title="View Expenses" onPress={goToHome} />
+                <Button title="Go to Set Limits" onPress={goToSetLimits} />
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#f4f4f4',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '80%',
+    marginTop: 20,
+  },
 });
